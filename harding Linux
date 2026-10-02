@@ -17,8 +17,8 @@ sudo pro attach YOUR_TOKEN
 sudo apt update && sudo apt upgrade -y
 2. Stop using root; use a sudo user
 bash
-sudo adduser brown
-sudo usermod -aG sudo brown
+sudo adduser "brown"
+sudo usermod -aG sudo "user"
 
 List users with sudo rights:
 
@@ -165,7 +165,7 @@ anon_umask=000
 Create the allowed-users list (never include guest) and restart:
 
 bash
-echo "sheldon" | sudo tee /etc/vsftpd.userlist
+echo "user" | sudo tee /etc/vsftpd.userlist
 sudo systemctl restart vsftpd
 8. Samba (Windows file sharing)
 
